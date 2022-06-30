@@ -1,4 +1,5 @@
 from setuptools import setup
+from distutils.core import setup
 
 with open('README.md') as f:
     long_description = f.read()
@@ -15,10 +16,7 @@ setup(
   url = 'https://github.com/v-jonathangu/pip-package-example',
   #download_url = 'https://github.com/v-jonathangu/pip-package-example/archive/v_0.7.tar.gz',
   keywords = ['sample package', 'azure devops'],
-  install_requires=[
-          'requests',
-          'pandas'
-      ],
+  install_requires=[],
   classifiers=[
     'Development Status :: 3 - Alpha',
     'Intended Audience :: Developers', 

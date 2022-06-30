@@ -21,7 +21,7 @@ steps:
   displayName: 'Use Python $(python.version)'
 
 - script: |
-    python -m pip install --upgrade pip
+    python -m pip install --upgrade pip wheel setuptools
     pip install twine keyring artifacts-keyring
   displayName: 'Install dependencies'
 
@@ -33,3 +33,4 @@ steps:
     python setup.py sdist bdist_wheel
     twine upload -r python-packages dist/*
   workingDirectory: ./package
+  displayName: setup and upload package
